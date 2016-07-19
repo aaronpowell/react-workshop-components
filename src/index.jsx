@@ -1,4 +1,15 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { render } from 'react-dom';
 
-render(<h1>Welcome!</h1>, document.getElementById('container'));
+
+class LifeCycledComponent extends Component {
+    render() {
+        return (
+            <div>
+
+            </div>
+        );
+    }
+}
+
+render(<LifeCycledComponent />, document.getElementById('container'));
