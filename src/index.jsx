@@ -1,4 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-render(<h1>Welcome!</h1>, document.getElementById('container'));
+let HelloWorld = () => <h1>Hello World!</h1>;
+
+render(<HelloWorld />, document.getElementById('container'));
