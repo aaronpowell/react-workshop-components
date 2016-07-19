@@ -25,6 +25,8 @@ FormItemComponent.propTypes = {
     value: PropTypes.string
 };
 
+let PasswordComponent = (props) => <FormItemComponent {...props} type="password" />;
+
 class LifeCycledComponent extends Component {
     constructor (props) {
         super(props);
@@ -52,7 +54,7 @@ class LifeCycledComponent extends Component {
         return (
             <form {...formProps}>
                 <FormItemComponent label="Username" id="username" value={this.state.username} change={(value) => this.change('username', value)} />
-                <FormItemComponent label="Password" id="password" type="password" value={this.state.password} change={(value) => this.change('password', value)} />
+                <PasswordComponent label="Password" id="password" value={this.state.password} change={(value) => this.change('password', value)} />
 
                 <fieldset>
                     <button type="submit">Login</button>
