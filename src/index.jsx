@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import { render } from 'react-dom';
 
 class FormItemComponent extends Component {
@@ -14,7 +14,15 @@ class FormItemComponent extends Component {
 
 FormItemComponent.defaultProps = {
     type: 'text',
-    vale: ''
+    value: ''
+};
+
+FormItemComponent.propTypes = {
+    type: PropTypes.string.isRequired,
+    change: PropTypes.func.isRequired,
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    value: PropTypes.string
 };
 
 class LifeCycledComponent extends Component {
